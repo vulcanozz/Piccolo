@@ -35,7 +35,7 @@ elseif(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Linux")
     set(LLVM_LIBRARY_DIR  ${CMAKE_CURRENT_SOURCE_DIR}/3rd_party/LLVM/lib/Linux)
     set(LLVM_SHARED_LIBRARY_DIR  ${CMAKE_CURRENT_SOURCE_DIR}/3rd_party/LLVM/bin/Linux)
     set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O3")
-    target_link_libraries(${TARGET_NAME}  ${LLVM_SHARED_LIBRARY_DIR}/libclang.so.12)
+    target_link_libraries(${TARGET_NAME}  ${LLVM_SHARED_LIBRARY_DIR}/libclang.so)
 elseif(${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL "arm64") 
     # link to XCode Toolchains' universal binary libclang.dylib 
     set(LLVM_LIBRARY_DIR  ${CMAKE_CURRENT_SOURCE_DIR}/3rd_party/LLVM/lib/macOS)
